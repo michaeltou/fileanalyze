@@ -1,0 +1,21 @@
+2024-01-30 10:41:34,816 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2024-01-30 10:41:34,817 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("mce_calc_object_info")
+2024-01-30 10:41:34,817 INFO sqlalchemy.engine.Engine [raw sql] ()
+2024-01-30 10:41:34,818 INFO sqlalchemy.engine.Engine COMMIT
+2024-01-30 10:41:34,821 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2024-01-30 10:41:34,825 INFO sqlalchemy.engine.Engine SELECT mce_calc_object_info.object_id AS mce_calc_object_info_object_id, mce_calc_object_info.object_name AS mce_calc_object_info_object_name, mce_calc_object_info.custom_tag AS mce_calc_object_info_custom_tag, mce_calc_object_info.parent_id AS mce_calc_object_info_parent_id, mce_calc_object_info.python_code AS mce_calc_object_info_python_code, mce_calc_object_info.python_expr AS mce_calc_object_info_python_expr, mce_calc_object_info.lru_maxsize AS mce_calc_object_info_lru_maxsize, mce_calc_object_info.ttl_seconds AS mce_calc_object_info_ttl_seconds, mce_calc_object_info.remark AS mce_calc_object_info_remark, mce_calc_object_info.sort_number AS mce_calc_object_info_sort_number, mce_calc_object_info.last_updated_time AS mce_calc_object_info_last_updated_time 
+FROM mce_calc_object_info
+2024-01-30 10:41:34,825 INFO sqlalchemy.engine.Engine [generated in 0.00032s] ()
+2024-01-30 10:41:34,827 INFO sqlalchemy.engine.Engine ROLLBACK
+2024-01-30 10:41:34,828 [140016632461120] INFO root MCE web application serving at 0.0.0.0:10573
+2024-01-30 10:41:34,843 [140016632461120] INFO waitress Serving on http://0.0.0.0:10573
+2024-01-30 10:42:42,555 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2024-01-30 10:42:42,555 [140016348444416] INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2024-01-30 10:42:42,555 INFO sqlalchemy.engine.Engine SELECT mce_calc_object_info.object_id AS mce_calc_object_info_object_id, mce_calc_object_info.object_name AS mce_calc_object_info_object_name, mce_calc_object_info.custom_tag AS mce_calc_object_info_custom_tag, mce_calc_object_info.parent_id AS mce_calc_object_info_parent_id, mce_calc_object_info.python_code AS mce_calc_object_info_python_code, mce_calc_object_info.python_expr AS mce_calc_object_info_python_expr, mce_calc_object_info.lru_maxsize AS mce_calc_object_info_lru_maxsize, mce_calc_object_info.ttl_seconds AS mce_calc_object_info_ttl_seconds, mce_calc_object_info.remark AS mce_calc_object_info_remark, mce_calc_object_info.sort_number AS mce_calc_object_info_sort_number, mce_calc_object_info.last_updated_time AS mce_calc_object_info_last_updated_time 
+FROM mce_calc_object_info
+2024-01-30 10:42:42,555 [140016348444416] INFO sqlalchemy.engine.Engine SELECT mce_calc_object_info.object_id AS mce_calc_object_info_object_id, mce_calc_object_info.object_name AS mce_calc_object_info_object_name, mce_calc_object_info.custom_tag AS mce_calc_object_info_custom_tag, mce_calc_object_info.parent_id AS mce_calc_object_info_parent_id, mce_calc_object_info.python_code AS mce_calc_object_info_python_code, mce_calc_object_info.python_expr AS mce_calc_object_info_python_expr, mce_calc_object_info.lru_maxsize AS mce_calc_object_info_lru_maxsize, mce_calc_object_info.ttl_seconds AS mce_calc_object_info_ttl_seconds, mce_calc_object_info.remark AS mce_calc_object_info_remark, mce_calc_object_info.sort_number AS mce_calc_object_info_sort_number, mce_calc_object_info.last_updated_time AS mce_calc_object_info_last_updated_time 
+FROM mce_calc_object_info
+2024-01-30 10:42:42,555 INFO sqlalchemy.engine.Engine [cached since 67.73s ago] ()
+2024-01-30 10:42:42,555 [140016348444416] INFO sqlalchemy.engine.Engine [cached since 67.73s ago] ()
+2024-01-30 10:42:42,557 INFO sqlalchemy.engine.Engine ROLLBACK
+2024-01-30 10:42:42,557 [140016348444416] INFO sqlalchemy.engine.Engine ROLLBACK

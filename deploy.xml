@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><deploy>
+  <basic describe="基本信息">
+    <packType options="pack:全量包;patch:补丁包" describe="包类型">pack</packType>
+    <systemType describe="系统类型">FAM</systemType>
+    <appType describe="服务标识">mce-service</appType>
+    <appName describe="服务别名">mce-service</appName>
+    <appDescribe describe="发布包说明">自动化估值-计算引擎服务</appDescribe>
+    <version describe="发布包版本">202312.00.001</version>
+  </basic>
+  <globalConfig describe="系统全局配置"/>
+  <subSystems describe="子系统集合">
+    <system mode="cluster" name="自动化估值公共服务" id="mce-service">
+
+	  <scripts describe="集群脚本集">
+        <script path="./${appType}/scripts/install.sh" name="install" describe="部署"/>
+        <script path="./${appType}/scripts/afterInstall.sh" name="afterInstall" describe="部署后置处理"/>
+        <script path="./${appType}/scripts/start.sh" name="start" describe="启动"/>
+        <script path="./${appType}/scripts/validateStart.sh" name="validateStart" describe="启动状态检测"/>
+        <script path="./${appType}/scripts/stop.sh" name="stop" describe="停止"/>
+        <script path="./${appType}/scripts/validateStop.sh" name="validateStop" describe="停止状态监测"/>
+      </scripts>
+
+	  <variables describe="子系统参数配置">
+        <field upgrade="true" tooltip="当前运行该项目的用户" name="user" label="运行用户" type="input" required="true">mce3</field>
+        <field tooltip="请正确设置安装路径" name="workspace" label="安装目录" type="input" required="true">/home/mce3/mce-service</field>
+        <field visible="false" tooltip="服务http端口" name="app_port" label="应用端口" type="input" required="true">10573</field>
+      </variables>
+
+      <monitors/>
+
+	  <node describe="节点私有配置信息">
+        <config template="./boot.ini" path="./${appType}/app/boot.ini" encoding="UTF-8"/>
+        <config path="./${appType}/scripts/start.sh" encoding="UTF-8"/>
+        <config path="./${appType}/scripts/stop.sh" encoding="UTF-8"/>
+        <config path="./${appType}/scripts/validateStart.sh" encoding="UTF-8"/>
+        <config path="./${appType}/scripts/validateStop.sh" encoding="UTF-8"/>
+        <config path="./${appType}/scripts/install.sh" encoding="UTF-8"/>
+        <config path="./${appType}/scripts/afterInstall.sh" encoding="UTF-8"/>
+      </node>
+    </system>
+  </subSystems>
+</deploy>
